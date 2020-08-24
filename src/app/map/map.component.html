@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-12">
+    <h1> Find your Pet Partner Near By</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6 col-md-4 col-lg-3">
+    <p-autoComplete [(ngModel)]="locationText" [suggestions]="results" placeholder="Enter your Location"></p-autoComplete>
+    <p *ngIf="emptyLocation" class="danger">Please enter a valid location</p>
+  </div>
+  <div class="col-sm-6 col-md-4  col-lg-3">
+    <p-slider [(ngModel)]="sliderValue"></p-slider>
+    <p class="primary">Within {{sliderValue}} kms </p>
+  </div>
+  <div class="col-sm-6 col-md-4  col-lg-3">
+    <button class="btn btn-primary" (click)="searchNearBy()">Search Nearby</button>
+
+  </div>
+</div>
+<div class="clearfix"></div>
+
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-8">
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoomLevel">
+      <agm-marker *ngFor="let pet of petsArray" [latitude]="pet.lat" [longitude]="pet.long"></agm-marker>
+    </agm-map>
+  </div>
+  <div class="col-2"></div>
+</div>
+<div class="clearfix"></div>

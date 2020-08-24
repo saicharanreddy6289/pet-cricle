@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-12">
+    <h1> Find your Pet Partner</h1>
+  </div>
+</div>
+<div class="clearfix"></div>
+<div class="row">
+  <div class="col-sm-6 col-md-4 col-lg-3">
+    <div class="form-group">
+      <label for="category">Pick a Category</label>
+      <select class="form-control" [(ngModel)]="selectedCategory">
+        <option *ngFor="let category of categories" [ngValue]="category.id"> {{category.name}}</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-4 col-lg-3">
+    <div class="form-group">
+      <label for="breed">Pick a Breed</label>
+      <select class="form-control" [(ngModel)]="selectedBreed">
+        <option *ngFor="let breed of breeds" [ngValue]="breed.id"> {{breed.name}}</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-4 col-lg-3">
+    <div class="form-group">
+      <label for="breed">Pick a Color</label>
+      <select class="form-control" [(ngModel)]="selectedColor">
+        <option *ngFor="let color of colors" [ngValue]="color.id"> {{color.name}}</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-4 col-lg-3">
+    <div class="form-group">
+      <label for="category">
+        <span class="danger" *ngIf="showErrorMessage"> Please select atleast one search condition</span>
+      </label>
+      <button class="btn btn-primary" [class.margin-top]="!showErrorMessage" (click)="search()">Search</button>
+    </div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+<app-spinner [show]="showSpinner"></app-spinner>
+<div class="row" *ngIf="!showSpinner">
+  <div class="col-sm-6 col-md-12 col-lg-12">
+    <app-pets-list (selectedPet)="selectedPet($event)" [petDetails]="petDetails"></app-pets-list>
+  </div>
+</div>

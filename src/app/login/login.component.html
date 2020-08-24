@@ -1,0 +1,35 @@
+<div class="container row p-0 col-sm-12">
+  <div class="col-md-6 col-sm-1 dog-image"><img src="assets/images/loginbg.jpg" alt="dog"></div>
+  <div class="card col-md-6 col-md-offset-1 col-sm-6">
+    <div class="card-body">
+      <h2>Login</h2>
+      <form>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="text" class="form-control" [(ngModel)]="email" placeholder="Enter email" id="email">
+        </div>
+        <div *ngIf="emailinvalid" class="error">
+          Please enter a valid email
+        </div>
+
+        <div class="form-group">
+          <label>Password </label>
+          <input type="password" class="form-control" [(ngModel)]="password" placeholder="Enter password" id="password">
+        </div>
+        <div *ngIf="passwordinvalid" class="error">
+          Please enter a password
+        </div>
+        <div class="custom-control custom-checkbox" id="inner">
+          <input type="checkbox" class="custom-control-input" id="defaultChecked2" checked>
+          <label class="custom-control-label" for="defaultChecked2">Remember me</label>
+        </div>
+        <div class="form-group">
+          <input type="submit" (click)="Validate()" value="Login" class="btn btn-primary mt-4" id="signin">
+        </div>
+        <div class="register">
+          Are you a new user ? <a href="#" class="btn btn-link cursor-pointer" [routerLink]="['/register']" > Register here</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+/**
+ Created by
+ Aravind Sundarrajan (B00824107)
+**/
+
+.card-img-top {
+    max-height: 238px;
+}
+@media (min-width:34em) {
+    .card-deck > .card
+    {
+        width: 29%;
+        flex-wrap: wrap;
+        flex: initial; 
+    }
+    }

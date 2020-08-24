@@ -1,0 +1,40 @@
+<div class="container-fluid">
+
+  <div class="row  blogRow">
+    <div class="col-sm-10"></div>
+    <div class="col-sm-2" style="margin-top: 2%;margin-bottom: 2%;">
+      <button type="button" class="btn btn-dark btn-lg post" *ngIf="petData.length>0" [routerLink]="['/postpet']">New Pet <i class="fa fa-plus addPet"
+          aria-hidden="true"></i></button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 text-center" *ngIf="petData.length==0 && !showSpinner">
+
+      <h3>It seems that you are not having any pets,</h3>
+      <br> <a [routerLink]="['/postpet']" href="#">Click here</a> to add a new pet
+    </div>
+    <div class="col-12" *ngIf="petData.length>0">
+      <div>
+        <div class="row">
+          <div class="col-md-6" *ngFor="let data of petData" id="pets2" >
+            <div class="card" style="width:70%;height:30%;">
+              <img class="img-thumbnail" [src]="data.image" i alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">{{data.pet_name}}
+                  <button class="btn btn-primary pull-right" (click)="navigateToPetDetails(data)">Details</button>
+                </h5>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<app-spinner [show]="showSpinner"></app-spinner>

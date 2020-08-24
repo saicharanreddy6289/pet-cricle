@@ -1,0 +1,212 @@
+<div class="container">
+ <div class="col-sm-12 card">
+    <div class="card-body"> 
+      <h3> Create new post </h3>
+      <ul class="nav nav-tabs" id="myTab">
+        <li class="nav-item">
+          <a class="nav-link active" id="missing-tab" data-toggle="tab" href="#missing" aria-selected="true">Missing pets</a>
+        </li>
+        <li  class="nav-item">
+          <a class="nav-link" id="adoption-tab" data-toggle="tab" href="#adoption" aria-selected="false">Adoption</a>
+        </li>
+        <li  class="nav-item">
+          <a class="nav-link" id="playtime-tab" data-toggle="tab" href="#playtime" aria-selected="false">Playtime</a>
+        </li>
+      </ul>
+</div>
+
+  <div class="tab-content">
+    <div id="missing"  role="tabpanel" class="tab-pane active">
+     <div class="row" id="form"> 
+      <div class="col-sm-6">
+        <form>
+          <div class="form-group">
+            <label id="label">Name *</label>
+            <input type="text" class="form-control" placeholder="Jack" id="name" [(ngModel)]="name" name="name">
+          </div>
+          <div *ngIf="alphalinvalid" class="error">
+            Please enter valid name
+          </div>
+        
+          <div class="form-group">
+            <label>Gender</label>
+            <select class="form-control" [(ngModel)] ="gender" name = "gender">
+              <option>Male</option>
+              <option>Female</option>                  
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Breed</label>
+            <input type="text" class="form-control" placeholder="German Shepherd" id="breed" [(ngModel)]="breed" name="breed">
+          </div>
+          <div *ngIf="breedinvalid" class="error">
+            Please enter valid breed name
+          </div>
+          
+
+          <div class="form-group">
+            <label>Age *</label>
+            <input type="number" class="form-control" min="1" max="20" placeholder="7 years" [(ngModel)]="age" name="age">
+          </div>
+
+          <div class="form-group">
+            <label>Colour</label>
+            <input type="text" class="form-control" placeholder="Black" id="color" [(ngModel)]="color" name="color">
+          </div>
+          <div *ngIf="colorinvalid" class="error">
+            Please enter valid color
+          </div>
+
+          <div class="form-group">
+            <label class="label">Phone number *</label>
+            <input type="text" class="form-control" placeholder="9021544574" id="telephone" [(ngModel)]="phoneno" name="phoneno">
+          </div>
+
+          <div *ngIf="telephoneinvalid" class="error">
+            Please enter valid number
+          </div>
+
+          <div class="form-group">
+            <label class="label">Email *</label>
+            <input type="email" class="form-control" placeholder="abc@gmail.com" id="email" required [(ngModel)]="email" name="email">
+          </div>
+
+          <div *ngIf="emailinvalid" class="error">
+            Please enter valid email
+          </div>
+
+          <div class="form-group">
+            <label>Additional description (Optional)</label>
+            <textarea class="form-control" rows="5" placeholder="Any additional information of the dog." [(ngModel)]="desc" name="desc"></textarea>
+          </div>
+          <button type="button" class="btn btn-primary" (click)="validateform();postMissingPets()">Submit</button>
+        </form>
+      </div>
+      <div class="col-sm-6 profile">
+        <div class="card body" id="uploadinner">
+          <img src="assets/images/profile.png" class="rounded-circle" alt="User profile">
+          <h4> Upload image </h4>
+          <div class="form-group">
+            <div class="custom-file">
+              <input type="file" class="custom-file-input"  accept="image/*"  (change)="handleInputChange($event)" >
+              <label class="custom-file-label">Choose file</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div> 
+
+    <div id="adoption"  role="tabpanel" class="tab-pane fade in">
+    <div class="row" id="form"> 
+      <div class="col-sm-6">
+        <form>
+          <div class="form-group">
+            <label id="label">Name *</label>
+            <input type="text" class="form-control" placeholder="Jack" id="name"  [(ngModel)]="name" name="name">
+          </div>
+          <div *ngIf="alphalinvalid" class="error">
+            Please enter valid name
+          </div>
+
+          <div class="form-group">
+              <label>Gender</label>
+              <select class="form-control" [(ngModel)] ="gender" name = "gender">
+                <option ngValue="male">Male</option>
+                <option ngValue="female">Female</option>                  
+              </select>
+            </div>
+            
+            
+          <div class="form-group">
+            <label>Breed</label>
+            <input type="text" class="form-control" placeholder="German Shepherd" id="breed" [(ngModel)]="breed" name="breed">
+          </div>
+          <div *ngIf="breedinvalid" class="error">
+            Please enter valid breed name
+          </div>
+
+          <div class="form-group"> 
+            <label>Choose the option</label>
+          </div>
+
+          <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+              <label class="form-check-label" for="inlineFormCheck">Looking to adopt pets</label> 
+            <div class="reveal-if-active">
+                <label>Annual Income</label>
+                <input type="text" class="form-control" placeholder="100000" id="income" [(ngModel)]="income" name="income">                
+           </div>
+           </div>
+            
+            <div class="form-check">       
+            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+            <label class="form-check-label" for="inlineFormCheck">
+              Wanna post about adoption
+          </label>  
+
+          <div class="reveal-if-active">
+                <label>Is additional medical care needed ? </label>
+                <select class="form-control" [(ngModel)] ="care" name = "care">
+                  <option>Yes</option>
+                  <option>No</option>                  
+                </select>
+              </div>  
+                
+            </div>  
+
+
+          <div class="form-group">
+            <label>Age *</label>
+            <input type="number" class="form-control" min="1" max="20" placeholder="7 years" [(ngModel)]="age" name="breed">
+          </div>
+
+          <div class="form-group">
+            <label>Colour</label>
+            <input type="text" class="form-control" placeholder="Black" id="color" [(ngModel)]="color" name="color">
+          </div>
+          <div *ngIf="colorinvalid" class="error">
+            Please enter valid color
+          </div>
+
+          <div class="form-group">
+            <label class="label">Phone number *</label>
+            <input type="number" class="form-control" placeholder="9021544574" id="telephone" [(ngModel)]="phoneno" name="phoneno">
+          </div>
+
+          <div *ngIf="telephoneinvalid" class="error">
+            Please enter valid number
+          </div>
+
+          <div class="form-group">
+            <label class="label">Email *</label>
+            <input type="email" class="form-control" placeholder="abc@gmail.com" id="email" [(ngModel)]="email" required name="email">
+          </div>
+
+          <div *ngIf="emailinvalid" class="error">
+            Please enter valid email
+          </div>
+
+          <button type="button" class="btn btn-primary" (click)="validateform();postAdoptionPets()">Submit</button>
+        </form>
+    
+      </div>
+      <div class="col-sm-6 profile">
+          <div class="card body" id="uploadinner">
+            <img src="assets/images/profile.png" class="rounded-circle" alt="User profile">
+            <h4> Upload image </h4>
+            <div class="form-group">
+              <div class="custom-file">
+                  <input type="file" class="custom-file-input"  accept="image/*"  (change)="handleInputChange($event)" >
+                <label class="custom-file-label">Choose file</label>
+              </div>
+            </div>
+          </div>
+      </div>
+      </div> 
+    </div>    
+  </div>
+  </div>
+
+

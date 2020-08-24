@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./node_modules/bootstrap/scss/bootstrap";
+*{
+font-family: 'Source Sans Pro'
+}
+agm-map {
+    height: 300px;
+    width: 80%;
+    text-align: center;
+  }
+  .ui-slider.ui-widget.ui-widget-content.ui-corner-all.ui-slider-horizontal{
+      margin-top:10px;
+  }
+  .clearfix{
+      margin-top:20px;
+      margin-bottom:20px;
+  }
+  .danger{
+      color: red;
+  }
+  .primary{
+      color:#4176cc;
+  }
+  select{
+      margin-left:10px;
+      width:100px;
+      border-radius: 10px;
+  }
+  input.ng-tns-c4-0.ui-inputtext.ui-widget.ui-state-default.ui-corner-all.ui-autocomplete-input{
+      border-radius: 10px;
+      margin-left:10px;
+  }
+  .pet-name{
+      text-align: center;
+  }
+  .footer {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+ }
+ .fa{
+     font-size:20px;
+     margin-left:20px;
+ }
+ body{
+    min-height: 100%;
+ }

@@ -1,0 +1,39 @@
+<div class="clearfix"></div>
+<h2 style="color:bl;margin-left:39%"><strong>Create Pet Profile</strong> </h2>
+<div class="card back-color">
+
+  <label class=label_style>Enter Pet Name*</label>
+  <input class="input_style form-control" required [(ngModel)]="pet_name" type="text">
+
+  <label class=label_style>Enter Pet Age*</label>
+  <input class="input_style form-control" [(ngModel)]="pet_age" type="text">
+  <label class=label_style>Enter pet Gender*</label>
+  <select [(ngModel)]="pet_gender" style="border-radius: 1px" class="input_style form-control" name="Gender">
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+
+  </select>
+
+
+  <label class=label_style>Enter pet Color*</label>
+  <input [(ngModel)]="pet_color" class="input_style form-control" type="text">
+
+  <label class=label_style>Enter pet Breed*</label>
+  <input [(ngModel)]="pet_breed" class="input_style form-control" type="text">
+
+  <label class=label_style>Enter pet Description*</label>
+  <textarea class="input_style form-control" [(ngModel)]="pet_description" rows="5" cols="50"
+    name="description">Enter description here...</textarea>
+
+  <img [src]="src" *ngIf="src"><br>
+  <label class=label_style>Upload Image*</label>
+
+  <input name="imageUrl" type="file" required class=label_style accept="image/*" (change)="handleInputChange($event)" />
+
+
+  <div class="row">
+    <input class=buttonstyle class="btn btn-secondary" type="submit" (click)="add_pet()" value="Submit">
+    <input class=buttonstyle class="btn btn-secondary" type="submit" (click)="cancel_pet()" value="Cancel">
+  </div>
+
+</div>

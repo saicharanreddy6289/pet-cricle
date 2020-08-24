@@ -1,0 +1,46 @@
+<!--
+ Created by
+ Kadambur Srikanth Vishaali ( B00821049)
+-->
+
+
+<div class="container"> 
+  <nav class="navbar nyavbar-expand-sm navbar-light bg-light action-bar justify-content-between">
+      <div class="input-group col-md-4">
+          <input class="form-control py-2 rounded" [(ngModel)]="breed" type="search" placeholder="Enter breed">   
+          <i class="fa fa-search"></i>                     
+      </div>
+
+      <div class="input-group col-md-4">
+          <input class="form-control py-2 rounded" [(ngModel)]="color" type="search" placeholder="Enter color">
+          <i class="fa fa-search"></i> 
+      </div>
+
+      <div class="input-group col-md-4">
+          <input class="form-control py-2 rounded" [(ngModel)]="desc" type="search" placeholder="Enter description">
+          <i class="fa fa-search"></i> 
+          <button type="button" class="btn btn-primary" (click)="filterMissingPets()">Apply</button>
+      </div>
+
+  </nav>
+  <app-spinner [show]="showSpinner"></app-spinner>
+<div class="row card-group" *ngIf="!showSpinner">
+      <div class="card-deck">  
+          <div class="card mb-4" *ngFor="let mp of missingPets | paginate: { id: 'pages',itemsPerPage: 9,currentPage: page}">
+            <img class="card-img-top" src="{{mp.image}}" alt="Missing pet">
+            <div class="card-body">
+              <h5 class="card-title">{{mp.pet_name}} ({{mp.gender}})</h5>
+              <!-- <h6 class="card-text">{{mp.gender}}</h6> -->
+              <h6 class="card-text">{{mp.age}} Years </h6> 
+              <p class="card-text">{{mp.description}}</p>
+              </div>
+          </div> 
+        </div>
+      </div>
+      
+      <div class="pagination" *ngIf="!showSpinner">
+          <pagination-controls  id="pages" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+      </div>
+      
+</div> 
+      

@@ -1,0 +1,148 @@
+nav {
+  background-color:slateblue;
+}
+
+.item{
+    color:white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+  .item:hover
+  {
+    color:black;
+  }
+
+  span{
+    font-size: larger;
+    color: white;
+    margin-left: 2%;
+    font-family: cursive;
+    font-variant-caps: petite-caps;
+    font-weight: 700;  
+  }
+
+  .card-body
+  {
+      /* padding: 40px; */
+      text-align: center;
+    
+  }
+
+.btn-primary {   
+  background-color: slateblue;    
+} 
+
+#cards
+{
+  margin-left: 30%;
+} 
+
+.carousel-item img
+{
+  max-width: 776px;
+  max-height: 436px;
+}
+
+#note
+{
+  margin-top: 5%;
+}
+
+h1
+{
+  font-family: cursive;
+  font-weight: 500;
+  text-align: left;
+  }
+
+p{
+  text-align: justify; 
+ }
+ 
+#divider
+{
+  margin-top:3%;
+}
+
+#service 
+{
+  margin-top:5%;
+}
+
+
+#divider
+{
+padding:3%;
+}
+
+#service img
+{
+  max-width: 338px;
+  max-height: 225px;
+  padding: 5%;
+}
+
+.card-title
+{
+    font-weight: 700; 
+    text-align: center;
+    font-weight: bolder;
+    text-transform: capitalize;
+    
+}
+
+
+.card-text
+{
+    text-align: center;
+    font-weight: 400;
+    color: gray;
+}
+
+h2{
+  font-family:cursive;
+  font-weight: 500;
+}
+
+a
+{
+  float: right;
+}
+  
+.btn
+{
+  font-weight: 700;
+}
+
+.btn:hover 
+{
+  font-weight: 700;
+  color:black;
+} 
+
+.card .welcome
+{
+  text-align: center;
+  padding: 0%;
+}
+
+.nav-link
+  {
+    color:black;
+  }
+
+ 
+ #signup
+ {
+      padding: 3px 18px;
+      border-radius: 20px;
+      margin-top: 4%;
+      width: 130px;
+      height: 40px;
+      
+  }
+
+  #logo{
+    height:43px;
+  }

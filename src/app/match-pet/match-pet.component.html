@@ -1,0 +1,29 @@
+<app-spinner [show]="showSpinner"></app-spinner>
+<div class="row" *ngIf="!showSpinner">
+  <div class="col-sm-5 col-md-5 col-lg-5">
+    <div class="text-center">
+      <h3>Your Pets</h3>
+    </div>
+    <app-pets-list (selectedPet)="selectedPet($event)" [petDetails]="petData"></app-pets-list>
+  </div>
+  <div class="col-sm-2 col-md-2 col-lg-2"></div>
+  <div class="col-sm-5 col-md-5 col-lg-5">
+    <div class="text-center">
+      <h3>Your Pet's Partner</h3>
+    </div>
+    <app-pets-list [petDetails]="petDetails"></app-pets-list>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <button (click)="matchPets()" class="btn btn-danger pull-right" *ngIf="!showSpinner"> Match These Two
+      pets <i class="fa fa-heartbeat pull-right"></i></button>
+  </div>
+</div>
+
+<!-- <div class="alert alert-success" role="alert" *ngIf="petsMatchedSuccessFully">
+  The selected pets are successfuly matched
+  <br>
+  Please use the following email address <strong>{{parentPet.email}}</strong> or
+  phone number <strong>{{parentPet.phoneno}}</strong> for further communication
+</div> -->

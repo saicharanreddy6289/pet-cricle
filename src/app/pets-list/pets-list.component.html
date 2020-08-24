@@ -1,0 +1,22 @@
+<!--
+ Created by
+ Aravind Sundarrajan (B00824107)
+-->
+
+<div class="row card-group">
+  <div class="card-deck">
+    <div class="card mb-4" *ngFor="let item of petDetails">
+      <img class="card-img-top" src="{{item.image}}" alt="Missing pet">
+      <div class="card-body">
+        <h5 class="card-title">
+          <span *ngIf="item.showRadioButton">
+            <input type="radio" (change)="selectPet(item)"/>
+          </span>
+          {{item.pet_name}}
+          <button (click)="selectPet(item)" class="btn btn-danger pull-right" *ngIf="item.showMatchButton">Match <i
+              class="fa fa-heartbeat pull-right"></i></button> </h5>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,142 @@
+/*
+ * Created by
+ * Kadambur Srikanth Vishaali ( B00821049)
+ */
+
+nav{
+    background-color:slateblue;
+  }
+  
+  .item{
+      color:white;
+      font-weight: 700;
+      cursor: pointer;
+  }
+  
+.item:hover
+{
+    color:black;
+}
+  
+ span
+{
+    font-size: larger;
+    color: white;
+    margin-left: 2%;
+    font-family: cursive;
+    font-variant-caps: petite-caps;
+    font-weight: 700;  
+}
+
+@media (min-width:34em) {
+.card-deck > .card
+{
+    width: 29%;
+    flex-wrap: wrap;
+    flex: initial; 
+}
+}
+
+.cardBorder
+{
+    border: 1px solid;
+    margin-right:2%;
+    }
+
+
+.itemImage
+{
+    max-height: 200px;
+    max-width: 200px;
+}
+
+ #user  
+{
+    height:30px;
+}
+    
+.container .row
+{
+margin-top: 5%;
+}      
+
+.btn-success
+{
+    background:slategrey;
+}
+
+.container .navbar
+{
+    margin-top:5%;    
+    margin-left: -1em;
+}
+
+.card-img-top
+{
+max-height: 238px;
+}
+
+.card-title, .card-text
+{
+    text-align:center;
+}
+
+.top-bar .btn
+{
+    background-color: transparent;
+    max-height: 35px;
+    max-width: 50px;
+    border-color: transparent;
+}
+
+.pagination
+{
+    margin-top:2%;
+    justify-content:center;
+}
+
+#profile:focus
+{
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+
+} 
+
+.navbar-nav .dropdown-menu {
+    margin-top: 10px;
+}
+
+#profile:hover
+{
+    background-color: transparent;
+    border-color:transparent;
+
+} 
+
+.top-bar .nav-link {
+    padding: 8px 15px;
+}
+
+.action-bar .fa-search {
+    top: 11px;
+    left: -15%;
+    position: relative;
+    
+}
+
+.action-bar .btn-primary {
+    padding: 3px 18px;
+    border-radius: 20px;
+    margin-left: 10%;
+}
+
+.action-bar .nav-item {
+    padding-right: 3%;
+}
+
+#logo
+{
+    height:43px;
+}
+

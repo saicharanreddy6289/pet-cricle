@@ -1,0 +1,89 @@
+<div class="container-fluid">
+  
+    <div  class="row  blogRow">
+      <div class="col-sm-10"></div>
+      <div class="col-sm-2">
+   
+      </div>
+    </div>
+    <app-spinner [show]="showSpinner"></app-spinner>
+    <div class="clearfix"></div>
+    <div class="row">
+    
+    <div class="col-12">
+      <div *ngFor="let data of petData">
+      <div class="row">
+        <div class="col-md-3" id="pets2">
+          <div class="card" style="width:100% ">
+            <img class="img-thumbnail" [src]="data.image"  i alt="Card image cap">
+          </div>
+  
+        </div>
+        <div class="col-md-6" id="pets1">
+          <div class="card" style="width: 100%;">
+            <div class="card-body">
+              <table>
+                <tr>
+                  <th scope="row">
+                    <h6><b>Pet Name</b></h6>
+                  </th>
+                  <td>
+                    <h6>{{data.pet_name}}</h6>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <h6><b>Gender</b></h6>
+                  </th>
+                  <td>
+                    <h6>{{data.gender}}</h6>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <h6><b>Age</b></h6>
+                  </th>
+                  <td>
+                    <h6>{{data.age}}</h6>
+                  </td>
+                </tr>
+                
+                <tr>
+                  <th scope="row">
+                    <h6><b>Breed</b></h6>
+                  </th>
+                  <td>
+                    <h6>{{data.breed}}</h6>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <h6><b>Color</b></h6>
+                  </th>
+                  <td>
+                    <h6>{{data.color}}</h6>
+                  </td>
+                </tr>
+  
+                <tr>
+                  <th scope="row">
+                    <h6><b>Pet Description</b></h6>
+                  </th>
+                  <td>
+                    <h6>
+                      {{data.description}}</h6>
+                  </td>
+                </tr>
+                
+              </table>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+    </div>
+  </div>
+  
+  </div>
+  

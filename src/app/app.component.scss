@@ -1,0 +1,148 @@
+.navbar-brand{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.navbar-dark .navbar-nav .nav-link {
+  font-weight: bold;
+}
+.margin-10 {
+  margin-right: 10px;
+}
+nav{
+    background-color:slateblue;
+  }
+  
+  .item{
+      color:white;
+      font-weight: 700;
+      cursor: pointer;
+  }
+  
+    .item:hover
+    {
+      color:black;
+    }
+  
+    h3
+    {
+        text-align: center;
+    }
+  
+  span{
+      font-size: larger;
+      color: white;
+      margin-left: 2%;
+      font-family: cursive;
+      font-variant-caps: petite-caps;
+      font-weight: 700;  
+    }
+  
+    .card{
+      margin-top: 5%;
+    }
+  
+    #upload .card body
+    {
+      padding:20px;
+    }
+  
+    h4{
+      text-align: center;
+      margin-top:10%;
+    }
+  
+    #upload .form-group
+  {
+    margin-top:5%;
+  }
+  
+  .form-group label{
+    font-style: cursive;
+    font-weight: bold;
+  }
+  
+  #uploadinner
+    {
+       max-height: 350px;
+       max-width: 350px;
+       margin-left:20%;
+       padding:20px;
+  
+        }
+  
+    #uploadinner img
+  
+    {
+      max-height: 350px;
+      max-width: 350px;
+  
+    }
+  
+    .btn
+    {
+      float: right;
+    }
+  
+  
+    .dropdown .btn-primary 
+  {
+      background-color: transparent;
+      max-height: 35px;
+      max-width: 50px;
+      border-color: transparent;
+      }
+  
+    .nav-link.active
+    {
+      color:#007bff;
+      border-top: 3px solid #007bff;
+    }
+  
+    #form
+    {
+     margin-top:4%;
+    }
+  
+    .custom-file
+    {
+      margin-top:2%;
+    }
+  
+    profile:focus
+  {
+      outline: none;
+      box-shadow: none;
+      background-color: transparent;
+  
+  } 
+  
+  .navbar-nav .dropdown-menu {
+      margin-top:21%
+  }
+  
+  #profile:hover
+  {
+      background-color: transparent;
+      border-color:transparent;
+  
+  } 
+  
+  @media screen and (max-width: 700px) {
+    .container .profile {
+      display:none;
+    }
+  }
+  
+  .error
+  {
+    color:red;
+  }
+  
+  #logo
+  {
+    height:43px;
+  }
+  
+  #user
+  {
+    height:30px;
+  }

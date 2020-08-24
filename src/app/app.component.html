@@ -1,0 +1,77 @@
+<nav class="navbar navbar-expand-lg navbar-dark primary-color">
+  <a href="#"><img src="assets/images/logo1.png" id="logo" alt="logo"></a>
+  <span>Pet Circle</span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link item" routerLink="/missing-pets">Missing pets</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link item" routerLink="/post" *ngIf="showMenuItem">Post</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a *ngIf="showMenuItem" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Match
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#" routerLink="/match/near-by">Near By</a>
+          <a class="dropdown-item" href="#" routerLink="/match/search">Search</a>
+        </div>
+      </li>
+      <li class="nav-item" *ngIf="showMenuItem" >
+        <a class="nav-link item"  routerLink="/messages">Messages</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link item" *ngIf="showMenuItem"   routerLink="/petdetailslist">Your Pets </a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link item">About us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link item" >Support</a>
+      </li>
+      <li class="nav-item margin-10">
+        <button *ngIf="!showMenuItem && showLoginButton" type="button" class="btn btn-outline-light" routerLink="/login">Login</button>
+      </li>
+    </ul>
+    <div *ngIf="showMenuItem" class="dropdown">
+      <a><img src="assets/images/login.png" id="user" alt="userpic"> </a>
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="profile">
+      </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <!-- <a class="dropdown-item">Profile</a> -->
+        <a class="dropdown-item" routerLink="/your-pets">Your Pets</a>
+        <!-- <a class="dropdown-item">Settings</a> -->
+        <a class="dropdown-item" (click)="logout()">Logout</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid" style="
+min-height: 1000px;
+">
+  <div class="row">
+    <div class="col-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<!-- TODO -->
+<nav class="nav navbar navbar-light footer">
+  <div class="row col-12">
+    <div class="col-md-4  col-lg-4">
+      <i class="fa fa-facebook-square"></i>
+      <i class="fa fa-instagram"></i>
+      <i class="fa fa-twitter"></i>
+    </div>
+    <div class="col-md-4 col-lg-4">
+      <div>&copy; Pets Circle</div>
+    </div>
+    <div class="col-md-4  col-lg-4"></div>
+  </div>
+</nav>

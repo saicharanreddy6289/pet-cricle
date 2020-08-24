@@ -1,0 +1,97 @@
+.container
+{
+margin-top: 7%;    
+}
+
+.card {
+  max-width: 450px;
+}
+.dog-image {
+  max-width: 40%;
+}
+nav{
+  background-color:slateblue;
+}
+
+#inner
+{
+  margin-top:7%;
+}
+
+.btn-primary {   
+    background-color: slateblue;    
+} 
+
+h2
+{
+  text-align: center;
+}
+
+.register
+{
+  margin-top:5%;
+}
+
+span{
+    font-size: larger;
+    color: white;
+    margin-left: 2%;
+    font-family: cursive;
+    font-variant-caps: petite-caps;
+    font-weight: 700;  
+  }
+  
+  .nav{
+    background-color: slateblue;
+  }
+
+  .nav-link
+  {
+    color:black;
+  }
+
+  .item{
+    color:white;
+    font-weight: 700;
+    cursor: pointer;
+}
+  .cursor-pointer{
+    cursor: pointer;
+  }
+  .item:hover
+  {
+    color:black;
+  }
+
+  
+  .btn
+  {
+    font-weight: 700;
+  }
+  
+  .btn:hover 
+  {
+    font-weight: 700;
+  } 
+
+ a:hover
+  {
+    color:black;
+  } 
+
+  .error
+  {
+
+    color:red;
+  }
+
+  @media screen and (max-width: 700px) {
+    .container .dog-image {
+      display:none;
+    }
+  }
+
+  #logo
+  {
+    height:43px;
+  }
